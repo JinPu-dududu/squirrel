@@ -1,0 +1,33 @@
+{% load leaflet_tags %}
+<html>
+  <head>
+    {% leaflet_js plugins="ALL" %}
+    {% leaflet_css plugins="ALL" %}
+    <style>
+        .leaflet-container {  /* all maps */
+            width:  1400px;
+            height: 700px;
+        }
+
+        #specialbigmap {
+            height: 800px;
+        }
+
+        /* Resize the "display_raw" textbox */
+        .django-leaflet-raw-textarea {
+            width: 100%;
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("map:init", function (e) {
+          var detail = e.detail;
+	  {% for sighting in all_sightings %}
+              L.marker([{{ sighting.longitude }},{{ sighting.latitude }}]).addTo(detail.map);
+	  {% endfor %}
+      },false);
+    </script>
+  </head>
+  <body>
+    <h1>Squirrel Sighting Map</h1>
+    {% leaflet_map "squirrel_sighting" %}
+  </body>
+</html>

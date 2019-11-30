@@ -1,0 +1,10 @@
+{% if all_sightings %}
+    <ul>
+    {% for sighting in all_sightings %}
+        <li><a href="{% url 'sightings:ShowAllLinks' sighting.unique_squirrel_id }">{{ sighting.unique_squirrel_id }}</a>
+</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Sightings are avaiable.</p>
+{% endif %}
