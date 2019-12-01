@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from .models import Sighting
 
 def map(request):
-    all_sightings = Sighting.objects.all()
+    all_sightings = Sighting.objects.all()[:100]
     context = {'all_sightings': all_sightings}
     return render(request, 'sightings/map.html',context)
 

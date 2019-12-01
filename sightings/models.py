@@ -15,15 +15,16 @@ class Sighting(models.Model):
             decimal_places=13,
             )
 
-    unique_squirrel_id = models.IntegerField(
+    unique_squirrel_id = models.CharField(
             help_text=_('ID'),
+            max_length=255,
             )
     
-    AM = 'AM'
-    PM = 'PM'
+    AM = 'am'
+    PM = 'pm'
     SHIFT_CHOICES = (
-            (AM, 'AM'),
-            (PM, 'PM'),
+            (AM, 'am'),
+            (PM, 'pm'),
             )
     shift = models.CharField(
             help_text=_('Shift'),
@@ -35,11 +36,11 @@ class Sighting(models.Model):
             help_text=_('Date'),
             )
     
-    JUVENILE = 'Juvenile'
-    ADULT = 'Adult'
+    JUVENILE = 'juvenile'
+    ADULT = 'adult'
     AGE_CHOICES = (
-            (JUVENILE, 'Juvenile'),
-            (ADULT, 'Adult'),
+            (JUVENILE, 'juvenile'),
+            (ADULT, 'adult'),
             )
     age = models.CharField(
             help_text=_('Age'),
@@ -47,13 +48,13 @@ class Sighting(models.Model):
             choices=AGE_CHOICES,
             )
     
-    GRAY = 'Gray'
-    CINNAMON = 'Cinnamon'
-    BLACK = 'Black'
+    GRAY = 'gray'
+    CINNAMON = 'cinnamon'
+    BLACK = 'black'
     FUR_CHOICES = (
-            (GRAY, 'Gray'),
-            (CINNAMON, 'Cinnamon'),
-            (BLACK, 'Black')
+            (GRAY, 'gray'),
+            (CINNAMON, 'cinnamon'),
+            (BLACK, 'black')
             )
     primary_fur_color = models.CharField(
             help_text=_('Primary Fur Color'),
@@ -61,11 +62,11 @@ class Sighting(models.Model):
             choices=FUR_CHOICES,
             )
     
-    ABOVE = 'Above Ground'
-    PLANE = 'Ground Plane'
+    ABOVE = 'above ground'
+    PLANE = 'ground plane'
     LOCATION_CHOICES = (
-            (ABOVE, 'Above Ground'),
-            (PLANE, 'Ground Plane'),
+            (ABOVE, 'above ground'),
+            (PLANE, 'ground plane'),
             )
     location = models.CharField(
             help_text=_('Location'),
@@ -123,7 +124,7 @@ class Sighting(models.Model):
 
     approaches = models.BooleanField(
             help_text=_('Squirrel was seen approaching human'),
-            )
+                )
 
     indifferent = models.BooleanField(
             help_text=_('Squirrel was indifferent to human presence'),
@@ -133,5 +134,5 @@ class Sighting(models.Model):
             help_text=_('Squirrel was seen running from humans'),
             )
     def __str__(self):
-        return f"{self.unique_squirrel_id}"
+        return f"<{self.latitude:.3f},{self.longitude:.3f}>: {self.unique_squirrel_id}"
 
