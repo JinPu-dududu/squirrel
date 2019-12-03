@@ -18,8 +18,8 @@ class Command(BaseCommand):
             for row in rows:
                 t = row[5]
                 s = Sighting(
-                        latitude = row[0],
-                        longitude = row[1],
+                        longitude = row[0],
+                        latitude = row[1],
                         unique_squirrel_id = row[2],
                         shift = row[4],
                         date = timezone.datetime(int(t[4:]),int(t[:2]),int(t[2:4])).date(),

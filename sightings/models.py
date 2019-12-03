@@ -3,14 +3,14 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 class Sighting(models.Model):
-    latitude = models.DecimalField(
-            help_text=_('Latitude'),
+    longitude = models.DecimalField(
+            help_text=_('Longitude'),
             max_digits=15,
             decimal_places=13,
             )
 
-    longitude = models.DecimalField(
-            help_text=_('Longitude'),
+    latitude = models.DecimalField(
+            help_text=_('Latitude'),
             max_digits=15,
             decimal_places=13,
             )
