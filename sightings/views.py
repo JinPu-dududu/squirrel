@@ -29,6 +29,17 @@ def stats(request):
     eating0 = Sighting.objects.filter(eating=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
     foraging1 = Sighting.objects.filter(foraging=True).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
     foraging0 = Sighting.objects.filter(foraging=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    kuks1 = Sighting.objects.filter(kuks=True).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    kuks0 = Sighting.objects.filter(kuks=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    quaas1 = Sighting.objects.filter(quaas=True).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    quaas0 = Sighting.objects.filter(quaas=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    moans1 = Sighting.objects.filter(moans=True).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    moans0 = Sighting.objects.filter(moans=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    tail_flags1 = Sighting.objects.filter(tail_flags=True).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    tail_flags0 = Sighting.objects.filter(tail_flags=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    tail_twitches1 = Sighting.objects.filter(tail_twitches=True).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    tail_twitches0 = Sighting.objects.filter(tail_twitches=False).aggregate(Count('unique_squirrel_id'))['unique_squirrel_id__count']
+    
     context = {
             'running1': running1,
             'running0': running0,
@@ -39,7 +50,17 @@ def stats(request):
             'eating1': eating1,
             'eating0': eating0,
             'foraging1': foraging1,
-            'foraging0': foraging0
+            'foraging0': foraging0,
+            'kuks1': kuks1,
+            'kuks0': kuks0,
+            'quaas1': quaas1,
+            'quaas0': quaas0,
+            'moans1': moans1,
+            'moans0': moans0,
+            'tail_flags1': tail_flags1,
+            'tail_flags0': tail_flags0,
+            'tail_twitches1': tail_twitches1,
+            'tail_twitches0': tail_twitches0,
             }
     return render(request, 'sightings/stats.html', context)
 
