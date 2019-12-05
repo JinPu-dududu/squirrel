@@ -120,11 +120,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'collected-static'
 
-LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (40.7831, -73.9712),
-    'DEFAULT_ZOOM': 14,
-    'MIN_ZOOM': 3,
-    'MAX_ZOOM': 18,
-    'TILES': 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-}
