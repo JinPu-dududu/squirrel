@@ -10,7 +10,7 @@ class Command(BaseCommand):
     def add_arguments(self,parser):
         parser.add_argument('path', type=str)
 
-    def handle(self,*args,**kwargs):
+    def handle(self,*args,**options):
         path = kwargs['path']
         with open(path, 'r') as file:
             rows = csv.reader(file)
