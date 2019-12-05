@@ -4,19 +4,16 @@ from django.utils.translation import gettext as _
 
 class Sighting(models.Model):
     longitude = models.DecimalField(
-            help_text=_('Longitude'),
             max_digits=15,
             decimal_places=13,
             )
 
     latitude = models.DecimalField(
-            help_text=_('Latitude'),
             max_digits=15,
             decimal_places=13,
             )
 
     unique_squirrel_id = models.CharField(
-            help_text=_('ID'),
             max_length=255,
             )
     
@@ -27,13 +24,11 @@ class Sighting(models.Model):
             (PM, 'pm'),
             )
     shift = models.CharField(
-            help_text=_('Shift'),
             max_length=16,
             choices=SHIFT_CHOICES,
             )
     
     date = models.DateField(
-            help_text=_('Date'),
             )
     
     JUVENILE = 'juvenile'
@@ -43,7 +38,6 @@ class Sighting(models.Model):
             (ADULT, 'adult'),
             )
     age = models.CharField(
-            help_text=_('Age'),
             max_length=16,
             choices=AGE_CHOICES,
             )
@@ -57,7 +51,6 @@ class Sighting(models.Model):
             (BLACK, 'black')
             )
     primary_fur_color = models.CharField(
-            help_text=_('Primary Fur Color'),
             max_length=16,
             choices=FUR_CHOICES,
             )
@@ -69,70 +62,69 @@ class Sighting(models.Model):
             (PLANE, 'ground plane'),
             )
     location = models.CharField(
-            help_text=_('Location'),
             max_length=16,
             choices=LOCATION_CHOICES,
             )
 
     specific_location = models.TextField(
-            help_text=_('Commentart'),
+            help_text=_('Please specify the location.'),
             )
     
     running = models.BooleanField(
-            help_text=_('Squirrel was seen running'),
+            help_text=_('Squirrel was seen running.'),
             )
 
     chasing = models.BooleanField(
-            help_text=_('Squirrel was seen chasing'),
+            help_text=_('Squirrel was seen chasing.'),
             )
 
     climbing = models.BooleanField(
-            help_text=_('Squirrel was seen climbing'),
+            help_text=_('Squirrel was seen climbing.'),
             )
 
     eating = models.BooleanField(
-            help_text=_('Squirrel was seen eating'),
+            help_text=_('Squirrel was seen eating.'),
             )
 
     foraging = models.BooleanField(
-            help_text=_('Squirrel was seen foraging'),
+            help_text=_('Squirrel was seen foraging.'),
             )
 
     other_activities = models.TextField(
-            help_text=_('Other Activities'),
+            help_text=_('Please describe if not listed above.'),
             )
 
     kuks = models.BooleanField(
-            help_text=_('Squirrel was heard kukking'),
+            help_text=_('Squirrel was heard kukking.'),
             )
 
     quaas = models.BooleanField(
-            help_text=_('Squirrel was heard quaaing'),
+            help_text=_('Squirrel was heard quaaing.'),
             )
 
     moans = models.BooleanField(
-            help_text=_('Squirrel was heard moaning'),
+            help_text=_('Squirrel was heard moaning.'),
             )
 
     tail_flags = models.BooleanField(
-            help_text=_('Squirrel was seen flagging its tail'),
+            help_text=_('Squirrel was seen flagging its tail.'),
             )
 
     tail_twitches = models.BooleanField(
-            help_text=_('Squirrel was seen twitching its tail'),
+            help_text=_('Squirrel was seen twitching its tail.'),
             )
 
     approaches = models.BooleanField(
-            help_text=_('Squirrel was seen approaching human'),
+            help_text=_('Squirrel was seen approaching human.'),
                 )
 
     indifferent = models.BooleanField(
-            help_text=_('Squirrel was indifferent to human presence'),
+            help_text=_('Squirrel was indifferent to human presence.'),
             )
 
     runs_from = models.BooleanField(
-            help_text=_('Squirrel was seen running from humans'),
+            help_text=_('Squirrel was seen running from humans.'),
             )
     def __str__(self):
-        return f"<{self.latitude:.3f},{self.longitude:.3f}>: {self.unique_squirrel_id}"
+        return f"{self.unique_squirrel_id}"
 

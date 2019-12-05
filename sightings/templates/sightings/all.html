@@ -1,7 +1,7 @@
 {% if all_sightings %}
     <ul>
     {% for sighting in all_sightings %}
-        <li><a href="{% url 'sightings:ShowAllLinks' sighting.unique_squirrel_id }">{{ sighting }}</a>
+    <li><a href="/sightings/{{ sighting.unique_squirrel_id }}/">{{ sighting }}</a>
 </li>
     {% endfor %}
     </ul>
