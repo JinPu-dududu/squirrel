@@ -26,7 +26,7 @@ Squirrel Tracker provides high-level statistics summarizing the activities of sq
 
 
 ## Dependencies
-- Python 3.6
+- Python 3.7
 - sqlite3 database
 - Django 2.2.7
 - leaflet 0.0.3
