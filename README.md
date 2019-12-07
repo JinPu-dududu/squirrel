@@ -12,7 +12,7 @@ The Squirrel Tracker allows users to track all the known squirrels in Central Pa
 - Statistics: view stats of squirrel activities https://tools-for-analytics-255921.appspot.com/sightings/stats/
 
 
-## Main Features:
+## Main Features
 1. **Import and export data**
 Users can easily import squirrel data into the application, edit squirrel data in the application, and export data in CSV format.
 2. **Mapping**
