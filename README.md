@@ -13,15 +13,15 @@ The Squirrel Tracker allows users to track all the known squirrels in Central Pa
 
 
 ## Main Features
-1. **Import and export data**
+1. **Import and export data** <br />
 Users can easily import squirrel data into the application, edit squirrel data in the application, and export data in CSV format.
-2. **Mapping**
+2. **Mapping** <br />
 The mapping feature displays the precise location of squirrels in the imported dataset, with zoom in and zoom out functions, powered by [OpenStreetMap](https://www.openstreetmap.org/about/). 
-3. **Flexible data management**
+3. **Flexible data management** <br />
 Users can add and update squirrel data at their own discretion. The application supports the managing of a comprehensive list of squirrel attributes.
-3. **Customized sightings**
+3. **Customized sightings** <br />
 Users can also choose which squirrels to be displayed in the map by adding squirrel data or editing information of existing squirrels. In the /sightings page, users can click any data point to edit detailed information of that squirrel.
-4. **Statistics for fun**
+4. **Statistics for fun** <br />
 Squirrel Tracker provides high-level statistics summarizing the activities of squirrels, enabling users to quickly identify the behavioral patterns and characteristics of squirrels that they are interested in. The statistics tables will be updated instantly as users modify data in the database.
 
 
