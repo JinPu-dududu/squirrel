@@ -6,17 +6,17 @@ The Squirrel Tracker allows users to track all the known squirrels in Central Pa
 
 
 ## Where to get it?
-- Map: locate squirrels on the map [https://tools-for-analytics-255921.appspot.com/map/]
-- Sightings: a list of all data points (shown by unique id); click item to update information [https://tools-for-analytics-255921.appspot.com/sightings/]
-- Add data: add a new squirrel into the database [https://tools-for-analytics-255921.appspot.com/sightings/add/]
-- Statistics: view stats of squirrel activities [https://tools-for-analytics-255921.appspot.com/sightings/stats/]
+- Map: locate squirrels on the map https://tools-for-analytics-255921.appspot.com/map/
+- Sightings: a list of all data points (shown by unique id); click item to update information https://tools-for-analytics-255921.appspot.com/sightings/
+- Add data: add a new squirrel into the database https://tools-for-analytics-255921.appspot.com/sightings/add/
+- Statistics: view stats of squirrel activities https://tools-for-analytics-255921.appspot.com/sightings/stats/
 
 
 ## Main Features:
 1. **Import and export data**
 Users can easily import squirrel data into the application, edit squirrel data in the application, and export data in CSV format.
 2. **Mapping**
-The mapping feature displays the precise location of squirrels in the imported dataset, with zoom in and zoom out functions, powered by OpenStreetMap (https://www.openstreetmap.org/about/). 
+The mapping feature displays the precise location of squirrels in the imported dataset, with zoom in and zoom out functions, powered by [OpenStreetMap](https://www.openstreetmap.org/about/). 
 3. **Flexible data management**
 Users can add and update squirrel data at their own discretion. The application supports the managing of a comprehensive list of squirrel attributes.
 3. **Customized sightings**
